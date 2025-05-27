@@ -1,4 +1,4 @@
-package com.udemy.supplier;
+package com.udemy.bdd.factory;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
