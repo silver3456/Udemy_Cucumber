@@ -21,7 +21,7 @@ public class OfferPageStepDefinition {
     }
 
 
-    @Then("user searched for {string} shortname in offers page")
+    @Then("^user searched for (.+) shortname in offers page$")
     public void user_searched_for_same_shortname_in_offers_page(String shortName) {
         switchToOffersPage();
         OffersPage offersPage = testContextSetup.pageObjectManager.getOffersPage();
@@ -40,6 +40,6 @@ public class OfferPageStepDefinition {
 
     @Then("validate product name in offers page matches with Landing Page")
     public void validate_product_name_in_offers_page_matches_with_Landing_Page() {
-        Assert.assertEquals(testContextSetup.landingProductName, offerProductName);
+        Assert.assertEquals(offerProductName, testContextSetup.landingProductName);
     }
 }

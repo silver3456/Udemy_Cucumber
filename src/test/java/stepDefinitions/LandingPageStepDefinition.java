@@ -25,7 +25,8 @@ public class LandingPageStepDefinition {
         Assert.assertTrue(landingPage.getTitleLandingPage().contains("GreenKart"));
     }
 
-    @When("user searched with shortname {string} and extracted actual name of product")
+    // we need to add ^& (.+) when we parameterize test cases in Scenario Outline
+    @When("^user searched with shortname (.+) and extracted actual name of product$")
     public void user_searched_with_shortname_and_extracted_actual_name_of_product(String shortName) {
         landingPage.searchItem(shortName);
         Uninterruptibles.sleepUninterruptibly(3, TimeUnit.SECONDS);
